@@ -6,11 +6,22 @@ class BaseModel{
                     "root", "123456");
         return $connect;
     }
-    function getAll(){
-        $sql = "select * from " . $this->tableName;
-        $stmt = $this->getConnect()->prepare($sql);
+    static function getAll(){
+        $model = new static();
+        $sql = "select * from " . $model->tableName;
+        $stmt = $model->getConnect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    static function where($col, $op, $val){
+        // $col = tên cột
+        // $op = phép so sánh
+        // $val = giá trị cần so sánh
+        $model = new static();
+        $model->query = "select * from " . $model->tableName;
+        $model->query .= " where " . $col . " " . $op . " " . $val;
+        return $model;
     }
 }
 
@@ -18,19 +29,11 @@ class Category extends BaseModel{
     var $tableName = "categories";
     
 }
-
 class Product extends BaseModel{
     var $tableName = "products";
-    function getAll(){
-        $sql = "select * from " . $this->tableName;
-        $stmt = $this->getConnect()->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
+    
 }
-
 echo "<pre>";
-$cateObj = new Product();
-var_dump($cateObj->getAll());
+var_dump(Product::where('name', 'like', '%x%'));
 
 ?>
