@@ -5,7 +5,7 @@
         ['id' => 900, 'name' => 'Super Admin'],
     ];
 ?>
-<form action="save-new.php" method="post">
+<form action="save-new.php" method="post" enctype="multipart/form-data">
     <div>
         <label for="">Name</label>
         <input type="text" name="name">
