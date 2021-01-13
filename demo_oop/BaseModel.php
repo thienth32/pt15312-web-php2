@@ -1,4 +1,5 @@
 <?php 
+
 class BaseModel 
 {
 	
@@ -81,8 +82,8 @@ class BaseModel
 	}
 	public static function all(){
 		$model = new static();
-		$query = "select * from $model->tableName";
-		$stmt = $model->conn->prepare($query);
+        $query = "select * from $model->tableName";
+        $stmt = $model->getConnect()->prepare($query);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
  	}
