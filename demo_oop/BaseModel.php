@@ -2,9 +2,10 @@
 class BaseModel 
 {
 	
-	function __construct()
+	protected function getConnect()
 	{
-		$this->conn = new PDO('mysql:host=127.0.0.1;dbname=kaopiz;charset=utf8', 'root', '123456');
+        $conn = new PDO('mysql:host=127.0.0.1;dbname=kaopiz;charset=utf8', 'root', '123456');
+        return $conn;
 	}
 	public function insert($arr){
 		$this->queryBuilder = "insert into $this->tableName ";
@@ -19,7 +20,7 @@ class BaseModel
 		$cols .= ") ";
 		$vals .= ") ";
 		$this->queryBuilder .= $cols . ' values ' . $vals;
-		$stmt = $this->conn
+		$stmt = $this->getConnect()
 					->prepare($this->queryBuilder);
 		foreach ($arr as $key => &$value) {
 			$stmt->bindParam(":$key", $value);
@@ -35,7 +36,7 @@ class BaseModel
 		}
 		$this->queryBuilder = rtrim($this->queryBuilder, ',');
 		$this->queryBuilder .= " where id = :id";
-		$stmt = $this->conn
+		$stmt = $this->getConnect()
 					->prepare($this->queryBuilder);
 		foreach ($arr as $key => &$value) {
 			$stmt->bindParam(":$key", $value);
@@ -74,7 +75,7 @@ class BaseModel
 
 
 	public function execute(){
-		$stmt = $this->conn->prepare($this->queryBuilder);
+		$stmt = $this->getConnect()->prepare($this->queryBuilder);
 		return $stmt->execute();
 	}
 	public static function all(){
@@ -109,7 +110,7 @@ class BaseModel
  	}
  	public function first(){
 
- 		$stmt = $this->conn->prepare($this->queryBuilder);
+ 		$stmt = $this->getConnect()->prepare($this->queryBuilder);
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($this));
 
@@ -120,7 +121,7 @@ class BaseModel
 		}
  	}
  	public function get(){
- 		$stmt = $this->conn->prepare($this->queryBuilder);
+ 		$stmt = $this->getConnect()->prepare($this->queryBuilder);
 		$stmt->execute();
 		$result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($this));
 		
