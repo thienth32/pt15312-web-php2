@@ -3,6 +3,8 @@ $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 // echo $_GET['url'];
 require_once './app/controllers/HomeController.php';
 require_once './app/controllers/ProductController.php';
+require_once './app/models/BaseModel.php';
+require_once './app/models/Category.php';
 
 use App\Controllers\ProductController;
 use App\Controllers\HomeController;
