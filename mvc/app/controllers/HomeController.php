@@ -9,8 +9,7 @@ class HomeController
     public function index()
     {
         $cates = Category::all();
-        include_once './mvc/app/views/cate-list.php';
-        return " homepage here";
+        include_once './app/views/cate-list.php';
     }
     public function about()
     {
