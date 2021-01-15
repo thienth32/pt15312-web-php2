@@ -4,6 +4,10 @@ $url = isset($_GET['url']) == true
 
 require_once './app/controllers/HomeController.php';
 require_once './app/controllers/ProductController.php';
+require_once './app/models/BaseModel.php';
+
+use App\Controllers\HomeController;
+use App\Controllers\ProductController;
 switch($url){
     case "/":
         $ctr = new HomeController();
