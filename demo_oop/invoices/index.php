@@ -1,5 +1,5 @@
 <?php
-include_once './Invoice.php';
+include_once 'Invoice.php';
 $invoice = Invoice::all();
 ?>
 <table>

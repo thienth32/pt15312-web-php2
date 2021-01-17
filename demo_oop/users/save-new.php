@@ -1,5 +1,5 @@
 <?php
-require_once '../User.php';
+require_once 'User.php';
 $data = $_POST;
 $file = $_FILES['file'];
 $avatar = '';

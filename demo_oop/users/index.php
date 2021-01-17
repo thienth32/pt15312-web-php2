@@ -1,6 +1,6 @@
 <?php
 
-require_once '../User.php';
+require_once 'User.php';
 require_once '../utils.php';
 // hiển thị danh sách user trong db
 $users = User::all();
