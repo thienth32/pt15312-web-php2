@@ -1,5 +1,6 @@
 <?php
 include_once 'Invoice.php';
+require_once '../utils.php';
 $invoice = Invoice::all();
 ?>
 <table>

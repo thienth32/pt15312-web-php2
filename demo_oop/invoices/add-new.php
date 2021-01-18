@@ -1,9 +1,4 @@
 <?php
-$roles = [
-    ['id' => 0, 'name' => 'Member'],
-    ['id' => 200, 'name' => 'Admin'],
-    ['id' => 900, 'name' => 'Super Admin'],
-];
 ?>
 <form action="save-new.php" method="post" enctype="multipart/form-data">
     <div>
@@ -11,24 +6,24 @@ $roles = [
         <input type="text" name="name">
     </div>
     <div>
+        <label for="">phone number</label>
+        <input type="number" name="phone">
+    </div>
+    <div>
         <label for="">Email</label>
         <input type="text" name="email">
     </div>
     <div>
-        <label for="">Password</label>
-        <input type="password" name="password">
+        <label for="">address</label>
+        <input type="text" name="address">
     </div>
     <div>
-        <label for="">Avatar</label>
+        <label for="">price</label>
+        <input type="number" name="price">
+    </div>
+    <div>
+        <label for="">image</label>
         <input type="file" name="file">
-    </div>
-    <div>
-        <label for="">Role</label>
-        <select name="role">
-            <?php foreach ($roles as $r) : ?>
-                <option value="<?= $r['id'] ?>"><?= $r['name'] ?></option>
-            <?php endforeach ?>
-        </select>
     </div>
     <div>
         <button type="submit">Tạo mới</button>
