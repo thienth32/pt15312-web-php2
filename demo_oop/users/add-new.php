@@ -1,9 +1,9 @@
 <?php
-    $roles = [
-        ['id' => 0, 'name' => 'Member'],
-        ['id' => 200, 'name' => 'Admin'],
-        ['id' => 900, 'name' => 'Super Admin'],
-    ];
+$roles = [
+    ['id' => 0, 'name' => 'Member'],
+    ['id' => 200, 'name' => 'Admin'],
+    ['id' => 900, 'name' => 'Super Admin'],
+];
 ?>
 <form action="save-new.php" method="post" enctype="multipart/form-data">
     <div>
@@ -24,10 +24,10 @@
     </div>
     <div>
         <label for="">Role</label>
-        <select name="role" >
-            <?php foreach($roles as $r): ?>
-            <option value="<?= $r['id']?>"><?= $r['name']?></option>
-            <?php endforeach?>
+        <select name="role">
+            <?php foreach ($roles as $r) : ?>
+                <option value="<?= $r['id'] ?>"><?= $r['name'] ?></option>
+            <?php endforeach ?>
         </select>
     </div>
     <div>

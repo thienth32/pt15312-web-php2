@@ -2,11 +2,11 @@
 require_once 'Invoice.php';
 $data = $_POST;
 $file = $_FILES['file'];
-$image = '';
+$invoice_image = '';
 if ($file['size'] > 0) {
-    $image = 'uploads/' . $file['name'];
-    move_uploaded_file($file['tmp_name'], "../" . $image);
-    $data['image'] = $image;
+    $invoice_image = 'uploads/' . $file['name'];
+    move_uploaded_file($file['tmp_name'], "../" . $invoice_image);
+    $data['invoice_image'] = $invoice_image;
 }
 
 $model = new Invoice();

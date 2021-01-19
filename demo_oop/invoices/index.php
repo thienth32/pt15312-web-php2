@@ -23,10 +23,11 @@ $invoice = Invoice::all();
                 <td><?= $i->customer_email ?></td>
                 <td><?= $i->customer_address ?></td>
                 <td><?= $i->total_price ?></td>
-                <td><?= $i->invoice_image ?></td>
+                <td>
+                    <img src="<?= BASE_URL . $i->invoice_image ?>" width="70">
+                </td>
                 <td> <a href="remove.php?id=<?= $i->id ?>">xoa</a> </td>
             </tr>
-
         <?php endforeach; ?>
     </tbody>
 </table>

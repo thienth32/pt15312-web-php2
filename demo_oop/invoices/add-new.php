@@ -3,23 +3,23 @@
 <form action="save-new.php" method="post" enctype="multipart/form-data">
     <div>
         <label for="">Name</label>
-        <input type="text" name="name">
+        <input type="text" name="customer_name">
     </div>
     <div>
         <label for="">phone number</label>
-        <input type="number" name="phone">
+        <input type="number" name="customer_phone_number">
     </div>
     <div>
         <label for="">Email</label>
-        <input type="text" name="email">
+        <input type="text" name="customer_email">
     </div>
     <div>
         <label for="">address</label>
-        <input type="text" name="address">
+        <input type="text" name="customer_address">
     </div>
     <div>
         <label for="">price</label>
-        <input type="number" name="price">
+        <input type="number" name="total_price">
     </div>
     <div>
         <label for="">image</label>
