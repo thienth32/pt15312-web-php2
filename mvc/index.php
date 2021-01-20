@@ -2,10 +2,10 @@
 $url = isset($_GET['url']) == true 
                     ? $_GET['url'] : "/";
 
-require_once './app/controllers/HomeController.php';
-require_once './app/controllers/ProductController.php';
-require_once './app/models/BaseModel.php';
-require_once './app/models/Category.php';
+require_once './vendor/autoload.php';
+
+// composer require illuminate/database
+// composer require illuminate/events
 
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
