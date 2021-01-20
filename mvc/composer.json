@@ -1,0 +1,12 @@
+{
+    "name": "ducnguyen/mvc",
+    "require": {
+        "illuminate/events": "^8.23",
+        "illuminate/database": "^8.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

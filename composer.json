@@ -1,4 +1,9 @@
 {
     "name": "ad/pt15312-web-php2",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
 }
