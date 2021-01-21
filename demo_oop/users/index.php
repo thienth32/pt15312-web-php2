@@ -26,9 +26,12 @@ $users = User::all();
                     <img src="<?= BASE_URL . $u->avatar ?>" width="70">
                 </td>
                 <td>
-                    <a href="remove.php?id=<?= $u->id ?>">Xóa</a>
-
+                    <a href="change-user.php?id=<?= $u->id ?>">sửa</a>
                 </td>
+                <td>
+                    <a href="remove.php?id=<?= $u->id ?>">Xóa</a>
+                </td>
+
             </tr>
         <?php endforeach ?>
     </tbody>
