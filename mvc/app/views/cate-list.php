@@ -13,7 +13,7 @@
             <th>id</th>
             <th>name</th>
             <th>detail</th>
-            <th><a href="add-new.php">tao moi</a></th>
+            <th><a href="new-cate">tao moi</a></th>
         </thead>
         <tbody>
             <?php foreach ($cates as $c) : ?>

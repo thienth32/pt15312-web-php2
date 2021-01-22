@@ -23,7 +23,7 @@ switch ($url) {
         break;
     case "chi-tiet":
         $ctr = new ProductController();
-        echo $ctr->about();
+        echo $ctr->detail();
         break;
     case "new-cate":
         $ctr = new CategoryController();
