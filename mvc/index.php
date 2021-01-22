@@ -10,6 +10,7 @@ require_once './vendor/autoload.php';
 
 use App\Controllers\ProductController;
 use App\Controllers\HomeController;
+use App\Controllers\CategoryController;
 
 switch ($url) {
     case "/":
@@ -23,6 +24,14 @@ switch ($url) {
     case "chi-tiet":
         $ctr = new ProductController();
         echo $ctr->about();
+        break;
+    case "new-cate":
+        $ctr = new CategoryController();
+        echo $ctr->addNew();
+        break;
+    case "save-cate":
+        $ctr = new CategoryController();
+        echo $ctr->saveCate();
         break;
     default:
         echo "not found =))))";
