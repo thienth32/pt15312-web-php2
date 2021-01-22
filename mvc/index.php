@@ -2,6 +2,7 @@
 $url = isset($_GET['url']) == true 
                     ? $_GET['url'] : "/";
 
+require_once './config/database.php';                    
 require_once './vendor/autoload.php';
 
 // composer require illuminate/database
