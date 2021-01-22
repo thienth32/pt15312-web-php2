@@ -8,10 +8,19 @@ require_once './config/database.php';
 
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
+use App\Controllers\CategoryController;
 switch($url){
     case "/":
         $ctr = new HomeController();
         echo $ctr->index();
+        break;
+    case "new-cate":
+        $ctr = new CategoryController();
+        echo $ctr->addNew();
+        break;
+    case "save-cate":
+        $ctr = new CategoryController();
+        echo $ctr->saveCate();
         break;
     case "about":
         $ctr = new HomeController();
