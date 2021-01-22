@@ -22,13 +22,17 @@ switch($url){
         $ctr = new CategoryController();
         echo $ctr->saveCate();
         break;
-    case "about":
-        $ctr = new HomeController();
-        echo $ctr->about();
+    case "edit-cate":
+        $ctr = new CategoryController();
+        echo $ctr->editCate();
         break;
-    case "chi-tiet":
-        $ctr = new ProductController();
-        echo $ctr->detail();
+    case "save-edit-cate":
+        $ctr = new CategoryController();
+        echo $ctr->saveEdit();
+        break;
+    case "remove-cate":
+        $ctr = new CategoryController();
+        echo $ctr->removeCate();
         break;
     default:
         echo "Not found!";
