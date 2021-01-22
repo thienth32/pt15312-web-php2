@@ -10,6 +10,16 @@ class CategoryController
     {
         return " danh sách danh mục";
     }
+    public function editCate()
+    {
+        $id = $_GET['id'];
+        $model = Category::find($id);
+        if ($model) {
+            include_once './app/views/cates/edit.php';
+        } else {
+            header('location: ./');
+        }
+    }
     public function addNew()
     {
         # code...
