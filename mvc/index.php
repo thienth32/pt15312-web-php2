@@ -12,27 +12,27 @@ use App\Controllers\CategoryController;
 switch($url){
     case "/":
         $ctr = new HomeController();
-        echo $ctr->index();
+        $ctr->index();
         break;
     case "new-cate":
         $ctr = new CategoryController();
-        echo $ctr->addNew();
+        $ctr->addNew();
         break;
     case "save-cate":
         $ctr = new CategoryController();
-        echo $ctr->saveCate();
+        $ctr->saveCate();
         break;
     case "edit-cate":
         $ctr = new CategoryController();
-        echo $ctr->editCate();
+        $ctr->editCate();
         break;
     case "save-edit-cate":
         $ctr = new CategoryController();
-        echo $ctr->saveEdit();
+        $ctr->saveEdit();
         break;
     case "remove-cate":
         $ctr = new CategoryController();
-        echo $ctr->removeCate();
+        $ctr->removeCate();
         break;
     default:
         echo "Not found!";

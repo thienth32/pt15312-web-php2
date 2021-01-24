@@ -17,18 +17,18 @@
         </th>
     </thead>
     <tbody>
-        <?php foreach ($cates as $c): ?>
+        @foreach ($cates as $c)
             <tr>
-                <td><?= $c->id ?></td>
-                <td><?= $c->cate_name ?></td>
-                <td><?= $c->desc ?></td>
-                <td><?= $c->show_menu == 1 ? "Có" : "Không" ?></td>
+                <td>{{$c->id}}</td>
+                <td>{{$c->cate_name}}</td>
+                <td>{{$c->desc}}</td>
+                <td>{{$c->show_menu == 1 ? "Có" : "Không"}}</td>
                 <td>
-                    <a href="edit-cate?id=<?= $c->id ?>">Sửa</a>
-                    <a href="remove-cate?id=<?= $c->id ?>">Xóa</a>
+                    <a href="edit-cate?id={{$c->id}}">Sửa</a>
+                    <a href="remove-cate?id={{$c->id}}">Xóa</a>
                 </td>
             </tr>
-        <?php endforeach?>
+        @endforeach
     </tbody>
 </body>
 </html>
