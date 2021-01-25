@@ -1,6 +1,18 @@
 <?php
-
 namespace App\Controllers;
+class ProductController extends BaseController{
+
+    public function detail(){
+        return "Chi tiết sản phẩm";
+    }
+
+}
+
+
+?>
+
+
+<!-- namespace App\Controllers;
 
 class ProductController
 {
@@ -13,4 +25,4 @@ class ProductController
         # code...
         return " about product here";
     }
-}
+} -->

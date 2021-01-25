@@ -5,6 +5,7 @@ class BaseModel
 
 	protected function getConnect()
 	{
+
 		$conn = new PDO('mysql:host=127.0.0.1;dbname=kaopiz;charset=utf8', 'root', '');
 		return $conn;
 	}

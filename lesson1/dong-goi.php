@@ -1,29 +1,27 @@
 <?php
 
 class Cha{
-    public $name = 'FPT Poly';
-    protected $salary = 10000000;
-    private $bankAccount = "0002";
-    public function getBankAccount(){
-        return $this->bankAccount;
+    protected $name = "thienth";
+    public function getName(){
+        return $this->name;
     }
-}
-
-class Con extends Cha{
-    public function getSalary(){
-        return $this->salary;
-    }
-
-    public function setSalary($newSalary){
-        $this->salary = $newSalary;
-    }
-
     
 }
 
-$trung = new Con();
+class Con extends Cha{
+    public $name = 'han';
+    public function getName(){
+        return $this->name;
+    }
 
-var_dump($trung);
+    public function getParentName(){
+        return Parent::getName();
+    }
+}
+
+$trung = new Con();
+// $trung->name = "han";
+var_dump($trung->getParentName());
 
 
 
