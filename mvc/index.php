@@ -6,7 +6,10 @@ $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 // require_once './app/models/BaseModel.php';
 // require_once './app/models/Category.php';
 
+
+require_once './commons/uitls.php';
 require_once './vendor/autoload.php';
+require_once './config/database.php';
 
 use App\Controllers\ProductController;
 use App\Controllers\HomeController;
