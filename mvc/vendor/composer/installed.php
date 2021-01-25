@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
+    'reference' => '8f0ef61a5e95766d65f91cd8a8f37d72e950fa50',
     'name' => 'ducnguyen/mvc',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
+      'reference' => '8f0ef61a5e95766d65f91cd8a8f37d72e950fa50',
     ),
     'illuminate/bus' => 
     array (
