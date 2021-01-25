@@ -302,6 +302,7 @@
     </div>
 
    @include('layouts.script')
+   @yield('page-script')
 </body>
 
 </html>

@@ -15,7 +15,7 @@
         @foreach ($cates as $c)
             <tr>
                 <td>{{$c->id}}</td>
-                <td>{{$c->cate_name}}</td>
+                <td class="cate-name">{{$c->cate_name}}</td>
                 <td>{{$c->desc}}</td>
                 <td>{{$c->show_menu == 1 ? "Có" : "Không"}}</td>
                 <td>
@@ -26,4 +26,11 @@
         @endforeach
     </tbody>
 </table>
+@endsection
+@section('page-script')
+<script>
+    $('.cate-name').click(function(){
+        alert($(this).text());
+    });
+</script>
 @endsection
