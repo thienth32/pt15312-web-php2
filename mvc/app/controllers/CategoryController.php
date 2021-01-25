@@ -4,8 +4,8 @@ namespace App\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 
-
 class CategoryController extends BaseController{
+
 
     public function editCate(){
         $id = $_GET['id'];
@@ -56,6 +56,5 @@ class CategoryController extends BaseController{
     }
 
 }
-
 
 ?>

@@ -8,5 +8,4 @@ class Category extends Model{
         'show_menu' => 0,
     ];
 }
-
 ?>

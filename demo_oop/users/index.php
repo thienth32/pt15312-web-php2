@@ -17,7 +17,7 @@ $users = User::all();
         </th>
     </thead>
     <tbody>
-        <?php foreach ($users as $u): ?>
+        <?php foreach ($users as $u) : ?>
             <tr>
                 <td><?= $u->id ?></td>
                 <td><?= $u->name ?></td>
@@ -27,9 +27,9 @@ $users = User::all();
                 </td>
                 <td>
                     <a href="remove.php?id=<?= $u->id ?>">Xóa</a>
-                    
+
                 </td>
             </tr>
-        <?php endforeach?>
+        <?php endforeach ?>
     </tbody>
 </table>

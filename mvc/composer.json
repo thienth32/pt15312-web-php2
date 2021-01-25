@@ -1,5 +1,5 @@
 {
-    "name": "ginv2/mvc",
+  "name": "ducnguyen/mvc",
     "type": "project",
     "authors": [
         {
@@ -16,3 +16,4 @@
         "psr-4": {"App\\": "app/"}
     }
 }
+
