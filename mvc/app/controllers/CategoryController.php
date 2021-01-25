@@ -5,7 +5,7 @@ use App\Models\Category;
 use App\Models\Product;
 
 
-class CategoryController{
+class CategoryController extends BaseController{
 
     public function editCate(){
         $id = $_GET['id'];

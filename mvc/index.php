@@ -1,8 +1,11 @@
 <?php
 $url = isset($_GET['url']) == true 
                     ? $_GET['url'] : "/";
+
+require_once './commons/utils.php';
 require_once './vendor/autoload.php';
 require_once './config/database.php'; 
+
 // composer require illuminate/database
 // composer require illuminate/events
 
@@ -12,27 +15,27 @@ use App\Controllers\CategoryController;
 switch($url){
     case "/":
         $ctr = new HomeController();
-        echo $ctr->index();
+        $ctr->index();
         break;
     case "new-cate":
         $ctr = new CategoryController();
-        echo $ctr->addNew();
+        $ctr->addNew();
         break;
     case "save-cate":
         $ctr = new CategoryController();
-        echo $ctr->saveCate();
+        $ctr->saveCate();
         break;
     case "edit-cate":
         $ctr = new CategoryController();
-        echo $ctr->editCate();
+        $ctr->editCate();
         break;
     case "save-edit-cate":
         $ctr = new CategoryController();
-        echo $ctr->saveEdit();
+        $ctr->saveEdit();
         break;
     case "remove-cate":
         $ctr = new CategoryController();
-        echo $ctr->removeCate();
+        $ctr->removeCate();
         break;
     default:
         echo "Not found!";
