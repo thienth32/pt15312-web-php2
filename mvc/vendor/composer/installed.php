@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0d31c41f0a8a2555ff6cb800d57ec19bb11ad781',
+    'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
     'name' => 'ducnguyen/mvc',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0d31c41f0a8a2555ff6cb800d57ec19bb11ad781',
+      'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
     ),
     'illuminate/bus' => 
     array (
@@ -83,6 +83,15 @@
       ),
       'reference' => '16ba68c0b3964da8b25ff202201276d860fb587a',
     ),
+    'illuminate/filesystem' => 
+    array (
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2f468939ae97c861d683d35060e7ae0c11fdcb98',
+    ),
     'illuminate/macroable' => 
     array (
       'pretty_version' => 'v8.23.1',
@@ -109,6 +118,24 @@
       array (
       ),
       'reference' => 'b5f12bc62bfca920d0b3379da7a7d282999343af',
+    ),
+    'illuminate/view' => 
+    array (
+      'pretty_version' => 'v8.23.1',
+      'version' => '8.23.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '696a1d6d2213be192429e97245a3d2bb4d6d1849',
+    ),
+    'jenssegers/blade' => 
+    array (
+      'pretty_version' => 'v1.4.0',
+      'version' => '1.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '22a3700e9fc469c19dd1c5e5bd1b9138195e421f',
     ),
     'nesbot/carbon' => 
     array (
@@ -159,6 +186,15 @@
       array (
       ),
       'reference' => '47c02526c532fb381374dab26df05e7313978976',
+    ),
+    'symfony/finder' => 
+    array (
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0b9231a5922fd7287ba5b411893c0ecd2733e5ba',
     ),
     'symfony/polyfill-ctype' => 
     array (
