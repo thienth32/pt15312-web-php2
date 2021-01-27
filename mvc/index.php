@@ -1,10 +1,11 @@
 <?php
-$url = isset($_GET['url']) == true 
-                    ? $_GET['url'] : "/";
+session_start();
+$url = isset($_GET['url']) == true
+    ? $_GET['url'] : "/";
 
 require_once './commons/utils.php';
 require_once './vendor/autoload.php';
-require_once './config/database.php'; 
+require_once './config/database.php';
 
 // composer require illuminate/database
 // composer require illuminate/events
@@ -12,7 +13,9 @@ require_once './config/database.php';
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\CategoryController;
-switch($url){
+use App\Controllers\UserController;
+
+switch ($url) {
     case "/":
         $ctr = new HomeController();
         $ctr->index();
@@ -32,6 +35,14 @@ switch($url){
     case "save-edit-cate":
         $ctr = new CategoryController();
         $ctr->saveEdit();
+        break;
+    case "san-pham":
+        $ctr = new ProductController();
+        $ctr->index();
+        break;
+    case "login":
+        $ctr = new UserController();
+        $ctr->index();
         break;
     case "remove-cate":
         $ctr = new CategoryController();
