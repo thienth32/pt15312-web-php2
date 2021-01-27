@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'Danh sách danh mục')
 @section('main-content')
-<table>
+<table class="table table-stripped">
     <thead>
         <th>ID</th>
         <th>Tên danh mục</th>
@@ -13,21 +13,6 @@
     </thead>
     <tbody>
         @foreach ($cates as $c)
-<<<<<<< Updated upstream
-            <tr>
-                <td>{{$c->id}}</td>
-                <td>{{$c->cate_name}}</td>
-                <td>{{$c->desc}}</td>
-                <td>{{$c->show_menu == 1 ? "Có" : "Không"}}</td>
-                <td>
-                    <a href="edit-cate?id={{$c->id}}">Sửa</a>
-                    <a href="remove-cate?id={{$c->id}}">Xóa</a>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
-=======
         <tr>
             <td>{{$c->id}}</td>
             <td class="cate-name">{{$c->cate_name}}</td>
@@ -41,6 +26,7 @@
         @endforeach
     </tbody>
 </table>
+
 @endsection
 @section('page-script')
 <script>
@@ -48,5 +34,4 @@
         alert($(this).text());
     });
 </script>
->>>>>>> Stashed changes
 @endsection
