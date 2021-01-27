@@ -7,6 +7,10 @@ class Category extends Model{
     protected $attributes = [
         'show_menu' => 0,
     ];
+
+    public function products(){
+        return $this->hasMany(Product::class, 'cate_id');
+    }
 }
 
 ?>
