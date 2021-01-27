@@ -26,6 +26,7 @@
         @endforeach
     </tbody>
 </table>
+
 @endsection
 @section('page-script')
 <script>

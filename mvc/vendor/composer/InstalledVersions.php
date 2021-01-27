@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
+    'reference' => 'c79b52e3595974a01c3d29fcadfdf51ef2a343c0',
     'name' => 'ducnguyen/mvc',
   ),
   'versions' => 
@@ -50,7 +50,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8d19f5f2cfb9f901e85d42a968a4c18cd4d4624e',
+      'reference' => 'c79b52e3595974a01c3d29fcadfdf51ef2a343c0',
     ),
     'illuminate/bus' => 
     array (
