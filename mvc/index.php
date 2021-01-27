@@ -6,6 +6,13 @@ require_once './commons/utils.php';
 require_once './vendor/autoload.php';
 require_once './config/database.php'; 
 
+
+// use DebugBar\StandardDebugBar;
+
+// $debugbar = new StandardDebugBar();
+// $debugbarRenderer = $debugbar->getJavascriptRenderer();
+
+// $debugbar["messages"]->addMessage("hello world!");
 // composer require illuminate/database
 // composer require illuminate/events
 
@@ -36,6 +43,10 @@ switch($url){
     case "remove-cate":
         $ctr = new CategoryController();
         $ctr->removeCate();
+        break;
+    case "san-pham":
+        $ctr = new ProductController();
+        $ctr->index();
         break;
     default:
         echo "Not found!";

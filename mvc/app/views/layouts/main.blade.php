@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{THEME_ASSET_URL}}css/sb-admin-2.min.css" rel="stylesheet">
-
+    {{-- {{$debugbarRenderer->renderHead()}} --}}
 </head>
 
 <body id="page-top">
@@ -300,7 +300,7 @@
             </div>
         </div>
     </div>
-
+    {{-- {{$debugbarRenderer->render()}} --}}
    @include('layouts.script')
    @yield('page-script')
 </body>

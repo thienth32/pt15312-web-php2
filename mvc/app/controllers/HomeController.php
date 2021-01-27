@@ -7,6 +7,7 @@ class HomeController extends BaseController{
 
     public function index(){
         $cates = Category::all();
+        $cates->load('products');
         $this->render('cate-list', compact('cates'));
     }
 
