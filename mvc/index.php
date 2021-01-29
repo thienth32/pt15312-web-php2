@@ -58,6 +58,10 @@ switch($url){
         $ctr = new HomeController();
         $ctr->postLogin();
         break;
+    case "logout":
+        $ctr = new HomeController();
+        $ctr->logout();
+        break;
     default:
         echo "Not found!";
         break;

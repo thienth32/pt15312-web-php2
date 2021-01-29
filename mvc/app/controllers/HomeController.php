@@ -51,6 +51,11 @@ class HomeController extends BaseController{
         header('location: ' . BASE_URL);
 
     }
+
+    public function logout(){
+        unset($_SESSION[AUTH]);
+        header('location: ' . BASE_URL);
+    }
 }
 
 
