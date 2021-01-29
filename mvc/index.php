@@ -1,4 +1,5 @@
 <?php
+session_start();
 $url = isset($_GET['url']) == true 
                     ? $_GET['url'] : "/";
 
@@ -15,7 +16,7 @@ require_once './config/database.php';
 // $debugbar["messages"]->addMessage("hello world!");
 // composer require illuminate/database
 // composer require illuminate/events
-
+// var_dump(password_hash("123456", PASSWORD_DEFAULT));die;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\CategoryController;
@@ -25,6 +26,7 @@ switch($url){
         $ctr->index();
         break;
     case "new-cate":
+        checkAuth();
         $ctr = new CategoryController();
         $ctr->addNew();
         break;
@@ -45,6 +47,11 @@ switch($url){
         $ctr->removeCate();
         break;
     case "san-pham":
+        $ctr = new ProductController();
+        $ctr->index();
+        break;
+    case "login":
+        echo "Trang đăng nhập";die;
         $ctr = new ProductController();
         $ctr->index();
         break;
