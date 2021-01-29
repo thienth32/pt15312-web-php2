@@ -7,6 +7,7 @@
         <th>Tên danh mục</th>
         <th>Mô tả</th>
         <th>Hiển thị menu</th>
+        <th>Số sản phẩm</th>
         <th>
             <a href="new-cate">Tạo mới</a>
         </th>
@@ -23,6 +24,7 @@
                 <a href="remove-cate?id={{$c->id}}">Xóa</a>
             </td>
         </tr>
+
         @endforeach
     </tbody>
 </table>

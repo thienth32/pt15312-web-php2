@@ -1,5 +1,5 @@
 {
-  "name": "ducnguyen/mvc",
+    "name": "ducnguyen/mvc",
     "type": "project",
     "authors": [
         {
@@ -13,6 +13,8 @@
         "jenssegers/blade": "^1.4"
     },
     "autoload": {
-        "psr-4": {"App\\": "app/"}
+        "psr-4": {
+            "App\\": "app/"
+        }
     }
 }
