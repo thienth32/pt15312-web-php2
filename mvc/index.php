@@ -51,9 +51,8 @@ switch($url){
         $ctr->index();
         break;
     case "login":
-        echo "Trang đăng nhập";die;
-        $ctr = new ProductController();
-        $ctr->index();
+        $ctr = new HomeController();
+        $ctr->loginForm();
         break;
     default:
         echo "Not found!";

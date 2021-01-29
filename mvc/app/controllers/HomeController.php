@@ -13,13 +13,13 @@ class HomeController extends BaseController{
         }else{
             $cates = Category::all();
         }
-        // $cates = Category::all();
+        
         $cates->load('products');
         $this->render('cate-list', compact('cates'));
     }
 
-    public function about(){
-        return "About page here!";
+    public function loginForm(){
+        $this->render('auth.login');
     }
 }
 
