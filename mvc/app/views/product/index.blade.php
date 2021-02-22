@@ -11,11 +11,18 @@
         <tbody>
             @foreach ($products as $item)
                 <tr>
-                    <td>{{$loop->iteration}}</td>
+                    <td>{{$offset + $loop->iteration}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->category->cate_name}}</td>
                 </tr>                
             @endforeach
+            <tr>
+                <td colspan="3">
+                    @for($i = 1; $i <= $totalPage; $i++)
+                        <a href="{{BASE_URL . "san-pham?keyword=$keyword&page=$i" }}">{{$i}}<a>
+                    @endfor
+                </td>
+            </tr>
         </tbody>
     </table>
 @endsection

@@ -31,18 +31,22 @@ switch($url){
         $ctr->addNew();
         break;
     case "save-cate":
+        checkAuth();
         $ctr = new CategoryController();
         $ctr->saveCate();
         break;
     case "edit-cate":
+        checkAuth();
         $ctr = new CategoryController();
         $ctr->editCate();
         break;
     case "save-edit-cate":
+        checkAuth();
         $ctr = new CategoryController();
         $ctr->saveEdit();
         break;
     case "remove-cate":
+        checkAuth();
         $ctr = new CategoryController();
         $ctr->removeCate();
         break;
@@ -61,6 +65,10 @@ switch($url){
     case "logout":
         $ctr = new HomeController();
         $ctr->logout();
+        break;
+    case "api/products":
+        $ctr = new ProductController();
+        $ctr->apiProducts();
         break;
     default:
         echo "Not found!";

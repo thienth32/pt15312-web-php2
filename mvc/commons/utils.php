@@ -7,6 +7,12 @@ const MEMBER_ROLE = 1;
 const ADMIN_ROLE = 200;
 const AUTH = 'session_auth';
 
+const ROLE_LIST = [
+    'admin' => 200,
+    'mod' => 100,
+    'member' => 1
+];
+
 function checkAuth($role = MEMBER_ROLE){
     if(
         !isset($_SESSION[AUTH]) 
