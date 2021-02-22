@@ -37,8 +37,7 @@ class ProductController extends BaseController{
         echo json_encode($products);
     }
 
-    public function detail(){
-        $id = $_GET['id'];
+    public function detail($id){
         $product = Product::find($id);
         $product->load('category', 'galleries');
         dd($product);
