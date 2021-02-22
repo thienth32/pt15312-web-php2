@@ -51,8 +51,13 @@ switch($url){
         $ctr->removeCate();
         break;
     case "san-pham":
+        checkAuth();
         $ctr = new ProductController();
         $ctr->index();
+        break;
+    case "thong-tin-san-pham":
+        $ctr = new ProductController();
+        $ctr->detail();
         break;
     case "login":
         $ctr = new HomeController();

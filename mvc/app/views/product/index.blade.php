@@ -16,7 +16,7 @@
                     <td>{{$item->category->cate_name}}</td>
                 </tr>                
             @endforeach
-            <tr>
+            <tr class="position-absolute top-50 start-50 translate-middle">
                 <td colspan="3">
                     @for($i = 1; $i <= $totalPage; $i++)
                         <a href="{{BASE_URL . "san-pham?keyword=$keyword&page=$i" }}">{{$i}}<a>
