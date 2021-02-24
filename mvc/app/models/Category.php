@@ -11,6 +11,10 @@ class Category extends Model{
     public function products(){
         return $this->hasMany(Product::class, 'cate_id');
     }
+
+    public function getTablistProducts(){
+        return Product::where('cate_id', $this->id)->take(8)->get();
+    }
 }
 
 ?>
