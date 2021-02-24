@@ -1,11 +1,11 @@
 <?php
 session_start();
-$url = isset($_GET['url']) == true 
-                    ? $_GET['url'] : "/";
+$url = isset($_GET['url']) == true
+    ? $_GET['url'] : "/";
 
 require_once './commons/utils.php';
 require_once './vendor/autoload.php';
-require_once './config/database.php'; 
+require_once './config/database.php';
 require_once './commons/routes.php';
 
 // use DebugBar\StandardDebugBar;
@@ -81,14 +81,6 @@ require_once './commons/routes.php';
 // }
 
 ?>
-
-
-$url = isset($_GET['url']) == true ? $_GET['url'] : "/";
-// echo $_GET['url'];
-// require_once './app/controllers/HomeController.php';
-// require_once './app/controllers/ProductController.php';
-// require_once './app/models/BaseModel.php';
-// require_once './app/models/Category.php';
 
 
 <!-- require_once './commons/uitls.php';
