@@ -38,6 +38,7 @@ class ProductController extends BaseController{
     }
 
     public function detail($id){
+        
         $product = Product::find($id);
         $product->load('category', 'galleries');
         dd($product);
