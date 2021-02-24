@@ -7,6 +7,10 @@ class Product extends Model{
     public function category(){
         return $this->belongsTo(Category::class, 'cate_id');
     }
+
+    public function galleries(){
+        return $this->hasMany(ProductGallery::class, 'product_id');
+    }
 }
 
 ?>

@@ -1,4 +1,4 @@
-<form action="save-cate" method="post">
+<form action="" method="post">
     <div>
         <label for="">Tên danh mục</label>
         <input type="text" name="cate_name">

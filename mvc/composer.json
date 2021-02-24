@@ -10,7 +10,9 @@
     "require": {
         "illuminate/database": "^8.23",
         "illuminate/events": "^8.23",
-        "jenssegers/blade": "^1.4"
+        "jenssegers/blade": "*",
+        "maximebf/debugbar": "^1.16",
+        "phroute/phroute": "^2.1"
     },
     "autoload": {
         "psr-4": {
