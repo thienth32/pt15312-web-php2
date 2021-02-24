@@ -35,8 +35,8 @@
         </a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{BASE_URL}}">Danh sách</a>
-                <a class="collapse-item" href="{{BASE_URL . 'new-cate'}}">Tạo mới</a>
+                <a class="collapse-item" href="{{BASE_URL . 'admin/danh-muc'}}">Danh sách</a>
+                <a class="collapse-item" href="{{BASE_URL . 'admin/danh-muc/add'}}">Tạo mới</a>
             </div>
         </div>
     </li>
@@ -48,8 +48,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{BASE_URL . 'san-pham'}}">Danh sách</a>
-                <a class="collapse-item" href="{{BASE_URL . 'san-pham/tao-moi'}}">Tạo mới</a>
+                <a class="collapse-item" href="{{BASE_URL . 'admin/san-pham'}}">Danh sách</a>
+                <a class="collapse-item" href="{{BASE_URL . 'admin/san-pham/add'}}">Tạo mới</a>
             </div>
         </div>
     </li>

@@ -15,13 +15,23 @@ $router->filter('auth', function(){
     }
 });
 
-
 # kết thúc định nghĩa filter
+$router->group(['prefix' => 'admin'], function($router){
+    $router->get('/', [HomeController::class, "index"]);
+    $router->group(['prefix' => 'danh-muc'], function($router){
 
-$router->get('/', [HomeController::class, "index"]);
-// Route có áp dụng filter auth được định nghĩa ở phía trên
-$router->get('/new-cate', [CategoryController::class, "addNew"], ['before' => 'auth']);
-$router->post('/new-cate', [CategoryController::class, "saveCate"]);
+        $router->get('/', [HomeController::class, "index"]);
+        // Route có áp dụng filter auth được định nghĩa ở phía trên
+        $router->get('/add', [CategoryController::class, "addNew"], ['before' => 'auth']);
+        $router->post('/add', [CategoryController::class, "saveCate"]);
+    });
+
+    $router->group(['prefix' => 'san-pham'], function($router){
+
+        $router->get('/', [ProductController::class, 'index']);
+    });
+});
+
 
 // tham số tùy chọn: {name}?
 // tham số bắt buộc: {id}
