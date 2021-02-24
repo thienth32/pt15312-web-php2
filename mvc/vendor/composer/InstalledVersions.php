@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c79b52e3595974a01c3d29fcadfdf51ef2a343c0',
+    'reference' => 'ee4255d3a743b6193c5393f1130a5f5aedc0a116',
     'name' => 'ducnguyen/mvc',
   ),
   'versions' => 
@@ -50,7 +50,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c79b52e3595974a01c3d29fcadfdf51ef2a343c0',
+      'reference' => 'ee4255d3a743b6193c5393f1130a5f5aedc0a116',
     ),
     'illuminate/bus' => 
     array (
@@ -160,6 +160,15 @@ private static $installed = array (
       ),
       'reference' => '22a3700e9fc469c19dd1c5e5bd1b9138195e421f',
     ),
+    'maximebf/debugbar' => 
+    array (
+      'pretty_version' => 'v1.16.5',
+      'version' => '1.16.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6d51ee9e94cff14412783785e79a4e7ef97b9d62',
+    ),
     'nesbot/carbon' => 
     array (
       'pretty_version' => '2.43.0',
@@ -168,6 +177,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd32c57d8389113742f4a88725a170236470012e2',
+    ),
+    'phroute/phroute' => 
+    array (
+      'pretty_version' => 'v2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dbe2b986f9ee1dd33dc956fcc35d1fa22e8e196c',
     ),
     'psr/container' => 
     array (
@@ -184,6 +202,15 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
+    ),
+    'psr/log' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
     'psr/log-implementation' => 
     array (
@@ -315,6 +342,15 @@ private static $installed = array (
       array (
         0 => '2.0',
       ),
+    ),
+    'symfony/var-dumper' => 
+    array (
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '13e7e882eaa55863faa7c4ad7c60f12f1a8b5089',
     ),
     'voku/portable-ascii' => 
     array (

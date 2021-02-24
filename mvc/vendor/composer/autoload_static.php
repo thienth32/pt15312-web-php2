@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
+class ComposerStaticInit915ffd9f59a7849e2229c639daf3baf1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -18,6 +18,7 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -35,6 +36,7 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Finder\\' => 25,
@@ -43,7 +45,9 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
+            'Phroute\\Phroute\\' => 16,
         ),
         'J' => 
         array (
@@ -64,6 +68,7 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         'D' => 
         array (
             'Doctrine\\Inflector\\' => 19,
+            'DebugBar\\' => 9,
         ),
         'C' => 
         array (
@@ -112,6 +117,10 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
         ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
@@ -132,9 +141,17 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Phroute\\Phroute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
         ),
         'Jenssegers\\Blade\\' => 
         array (
@@ -182,6 +199,10 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
         ),
+        'DebugBar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -205,9 +226,9 @@ class ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitba58d425baf45b8fa4ac2c3920d37035::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit915ffd9f59a7849e2229c639daf3baf1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit915ffd9f59a7849e2229c639daf3baf1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit915ffd9f59a7849e2229c639daf3baf1::$classMap;
 
         }, null, ClassLoader::class);
     }
