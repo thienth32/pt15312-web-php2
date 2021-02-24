@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\CategoryController;
+use App\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use Phroute\Phroute\RouteCollector;
@@ -34,9 +35,7 @@ $router->group(['prefix' => 'admin', 'before' => 'auth'], function($router){
     });
 });
 
-$router->get('/', function(){
-    return "Trang chủ";
-});
+$router->get('/', [FrontendHomeController::class, 'index']);
 
 // tham số tùy chọn: {name}?
 // tham số bắt buộc: {id}
