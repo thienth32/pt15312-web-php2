@@ -40,6 +40,7 @@ $router->get('/', [FrontendHomeController::class, 'index']);
 // tham số tùy chọn: {name}?
 // tham số bắt buộc: {id}
 $router->get('/thong-tin-san-pham/{id}', [ProductController::class, "detail"]);
+$router->get('/danh-muc-san-pham/{id}', [CategoryController::class, 'listProduct']);
 
 # Authenticate
 $router->any('/logout', [HomeController::class, "logout"]);
@@ -51,6 +52,9 @@ $router->get('/error-404', function(){
     return "đường dẫn không tồn tại";
 });
 
+
+$router->get('fake-product-gallery', [ProductController::class, 'fakeGallery']);
+$router->get('fake-users', [HomeController::class, 'fakeUser']);
 
 
 $dispatcher = new Dispatcher($router->getData());

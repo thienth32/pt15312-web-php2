@@ -172,7 +172,7 @@
                                             <div class="product-image">
                                                 <div class="label-product label-sale">-20%</div>
                                                 <div class="label-product label-new">New</div>
-                                                <a href="single-product.html">
+                                                <a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">
                                                     <img src="{{ $item->image }}" alt="{{$item->name}}" title="{{$item->name}}">
                                                 </a>
                                                 <div class="action-links">
@@ -200,7 +200,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4 class="product-name"><a href="single-product.html">{{$item->name}}</a></h4>
+                                                <h4 class="product-name"><a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">{{$item->name}}</a></h4>
                                                 <p class="product-price">
                                                     <span class="price-new">${{number_format($item->price, 0, '.', '.')}}</span>
                                                 </p>
@@ -284,7 +284,7 @@
                                                     <div class="product-image">
                                                         <div class="label-product label-sale">-7%</div>
                                                         <div class="label-product label-new">New</div>
-                                                        <a href="single-product.html">
+                                                        <a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">
                                                             <img src="{{$tlPro->image}}" alt="{{$tlPro->name}}" title="{{tlPro}}">
                                                         </a>
                                                         <div class="action-links">
@@ -312,7 +312,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <h4 class="product-name"><a href="single-product.html">{{$tlPro->name}}</a></h4>
+                                                        <h4 class="product-name"><a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">{{$tlPro->name}}</a></h4>
                                                         <p class="product-price">
                                                             <span class="price-new">${{number_format($tlPro->price, 0, '.', '.')}}</span>
                                                         </p>

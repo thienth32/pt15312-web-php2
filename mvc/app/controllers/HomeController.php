@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\Category;
 use App\Models\User;
+use Faker;
 
 class HomeController extends BaseController{
 
@@ -55,6 +56,20 @@ class HomeController extends BaseController{
     public function logout(){
         unset($_SESSION[AUTH]);
         header('location: ' . BASE_URL);
+    }
+
+    public function fakeUser(){
+        $faker = Faker\Factory::create();
+        for($i = 0; $i < 100; $i++){
+            $model = new User();
+            $model->name = $faker->name;
+            $model->avatar = 'https://picsum.photos/640/480';
+            $model->email = $faker->email;
+            $model->role = 1;
+            $model->password = password_hash('123456', PASSWORD_DEFAULT);
+            $model->save();
+        }
+        return "Success!";
     }
 }
 
