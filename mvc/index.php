@@ -17,10 +17,12 @@ require_once './commons/routes.php';
 // composer require illuminate/database
 // composer require illuminate/events
 // var_dump(password_hash("123456", PASSWORD_DEFAULT));die;
+
 // use App\Controllers\HomeController;
 // use App\Controllers\ProductController;
 // use App\Controllers\CategoryController;
-// switch($url){
+
+// switch ($url) {
 //     case "/":
 //         $ctr = new HomeController();
 //         $ctr->index();

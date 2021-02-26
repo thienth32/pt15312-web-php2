@@ -56,5 +56,3 @@ class CategoryController extends BaseController{
     }
 
 }
-
-?>

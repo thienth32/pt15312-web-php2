@@ -34,7 +34,9 @@ $router->group(['prefix' => 'admin', 'before' => 'auth'], function ($router) {
     });
 });
 
-$router->get('/', [FrontendHomeController::class, 'index']);
+$router->get('/', function () {
+    return "Trang chủ";
+});
 
 // tham số tùy chọn: {name}?
 // tham số bắt buộc: {id}
