@@ -129,7 +129,7 @@
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <button type="button" class="default-btn">Add to Cart</button>
+                                                        <a href="{{BASE_URL . 'add-to-cart/' . $product->id}}" class="default-btn">Add to Cart</a>
                                                     </li>
                                                 </ul>
                                             </form>
