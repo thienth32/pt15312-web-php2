@@ -41,6 +41,8 @@ $router->get('/', [FrontendHomeController::class, 'index']);
 // tham số bắt buộc: {id}
 $router->get('/thong-tin-san-pham/{id}', [ProductController::class, "detail"]);
 $router->get('/danh-muc-san-pham/{id}', [CategoryController::class, 'listProduct']);
+
+// giỏ hàng
 $router->get('/add-to-cart/{id}', [HomeController::class, 'addToCart']);
 $router->get('/gio-hang', [HomeController::class, 'cartDetail']);
 $router->get('/clear-gio-hang', [HomeController::class, 'clearCart']);
