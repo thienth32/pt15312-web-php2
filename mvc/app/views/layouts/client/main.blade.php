@@ -32,7 +32,7 @@
         <!-- End of Header -->
 
         <div class="fixed-header-space"></div> <!-- empty placeholder div for Fixed Menu bar height-->
-
+        @yield('breadcrumb-section')
         <!-- Start of Main Content Wrapper -->
         <main id="content" class="main-content-wrapper">
 

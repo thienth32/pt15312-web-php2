@@ -172,7 +172,7 @@
                                             <div class="product-image">
                                                 <div class="label-product label-sale">-20%</div>
                                                 <div class="label-product label-new">New</div>
-                                                <a href="single-product.html">
+                                                <a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">
                                                     <img src="{{ $item->image }}" alt="{{$item->name}}" title="{{$item->name}}">
                                                 </a>
                                                 <div class="action-links">
@@ -200,7 +200,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4 class="product-name"><a href="single-product.html">{{$item->name}}</a></h4>
+                                                <h4 class="product-name"><a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">{{$item->name}}</a></h4>
                                                 <p class="product-price">
                                                     <span class="price-new">${{number_format($item->price, 0, '.', '.')}}</span>
                                                 </p>
@@ -263,7 +263,7 @@
                     <ul class="nav nav-pills justify-content-center" id="our_categories" role="tablist">
                         @foreach ($tablistCate as $tl)
                         <li class="nav-item">
-                            <a class="nav-link @if($loop->index == 0) active @endif" id="nav_tablist-{{$tl->id}}" data-toggle="pill" href="#tablist-{{$tl->id}}" role="tab" aria-controls="tablist-{{$tl->id}}" aria-selected="true">{{$tl->cate_name}}</a>
+                            <a class="nav-link @if($loop->first) active @endif" id="nav_tablist-{{$tl->id}}" data-toggle="pill" href="#catelist-{{$tl->id}}" role="tab" aria-controls="catelist-{{$tl->id}}" aria-selected="true">{{$tl->cate_name}}</a>
                         </li>
                         @endforeach
                     </ul> <!-- end of nav -->
@@ -271,7 +271,7 @@
                     <!-- Tab Contents -->
                     <div class="tab-content" id="our_categories_contents">
                         @foreach ($tablistCate as $tl)
-                        <div class="tab-pane show @if($loop->index == 0) active @endif anime-tab" id="tablist-{{$tl->id}}" role="tabpanel" aria-labelledby="nav_tablist-{{$tl->id}}">
+                        <div class="tab-pane @if($loop->first)active show @endif anime-tab" id="catelist-{{$tl->id}}" role="tabpanel" aria-labelledby="nav_tablist-{{$tl->id}}">
                             <div class="new-products pos-r">
                                 <div class="element-carousel" data-visible-slide="4" data-loop="false" data-space-between="0" data-speed="1000">
 
@@ -284,7 +284,7 @@
                                                     <div class="product-image">
                                                         <div class="label-product label-sale">-7%</div>
                                                         <div class="label-product label-new">New</div>
-                                                        <a href="single-product.html">
+                                                        <a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">
                                                             <img src="{{$tlPro->image}}" alt="{{$tlPro->name}}" title="{{tlPro}}">
                                                         </a>
                                                         <div class="action-links">
@@ -312,7 +312,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <h4 class="product-name"><a href="single-product.html">{{$tlPro->name}}</a></h4>
+                                                        <h4 class="product-name"><a href="{{BASE_URL . 'thong-tin-san-pham/' . $item->id}}">{{$tlPro->name}}</a></h4>
                                                         <p class="product-price">
                                                             <span class="price-new">${{number_format($tlPro->price, 0, '.', '.')}}</span>
                                                         </p>

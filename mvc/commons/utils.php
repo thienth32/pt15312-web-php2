@@ -6,6 +6,7 @@ const THEME_ASSET_URL = PUBLIC_URL . 'theme/';
 const MEMBER_ROLE = 1;
 const ADMIN_ROLE = 200;
 const AUTH = 'session_auth';
+const CART = 'session_cart';
 
 const ROLE_LIST = [
     'admin' => 200,

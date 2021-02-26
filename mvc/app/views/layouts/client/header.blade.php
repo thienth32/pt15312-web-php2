@@ -147,14 +147,8 @@
         <div class="container">
             <nav id="main_nav" class="stellarnav">
                 <ul>
-                    <li><a href="index.html"><span>Home</span></a>
-                        <ul>
-                            <li><a href="index.html">Home Page 1</a></li>
-                            <li><a href="index-2.html">Home Page 2</a></li>
-                            <li><a href="index-3.html">Home Page 3</a></li>
-                            <li><a href="index-4.html">Home Page 4</a></li>
-                            <li><a href="index-5.html">Home Page 5</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{BASE_URL}}"><span>Home</span></a>
                     </li>
                     <li class="mega" data-columns="4"><a href="shop-grid.html"><span>Shop</span></a>
                         <ul class="mega-container">
