@@ -1,8 +1,20 @@
 <?php
 namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+class Category extends Model{
+    protected $table = 'categories';
+    protected $fillable = ['cate_name', 'desc', 'show_menu'];
+    protected $attributes = [
+        'show_menu' => 0,
+    ];
 
-class Category extends BaseModel{
-    protected $tableName = 'categories';
+    public function products(){
+        return $this->hasMany(Product::class, 'cate_id');
+    }
+
+    public function getTablistProducts(){
+        return Product::where('cate_id', $this->id)->take(8)->get();
+    }
 }
 
 ?>
