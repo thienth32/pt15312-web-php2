@@ -1,3 +1,8 @@
+@php
+use App\Models\Category;
+$cates = Category::all();
+    
+@endphp
 <header class="header bgc-white header-type-1">
     <div class="top-bar">
         <div class="container">

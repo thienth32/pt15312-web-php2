@@ -18,8 +18,7 @@ class CategoryController extends BaseController{
     }
 
     public function addNew(){
-
-        include_once './app/views/cates/add-new.php';
+        $this->render('cates.add-new');
     }
 
     public function saveCate(){
@@ -53,6 +52,13 @@ class CategoryController extends BaseController{
         Product::where('cate_id', $id)->delete();
         $model->delete();
         header('location: ./');
+    }
+    public function checkNameExisted(){
+        
+        $name = $_POST['cate_name'];
+        $count = Category::where('cate_name', $name)->count();
+        echo json_encode($count <= 0);
+        die;
     }
 
 }
