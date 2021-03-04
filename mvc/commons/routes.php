@@ -3,6 +3,7 @@
 use App\Controllers\CategoryController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
+use App\Models\Category;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
@@ -26,6 +27,7 @@ $router->group(['prefix' => 'admin', 'before' => 'auth'], function ($router) {
         // Route có áp dụng filter auth được định nghĩa ở phía trên
         $router->get('/add', [CategoryController::class, "addNew"]);
         $router->post('/add', [CategoryController::class, "saveCate"]);
+        $router->post('/check-cate-name', [CategoryController::class, 'checkNameExisted']);
     });
 
     $router->group(['prefix' => 'san-pham'], function ($router) {
