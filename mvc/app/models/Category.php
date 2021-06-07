@@ -16,5 +16,4 @@ class Category extends Model{
         return Product::where('cate_id', $this->id)->take(8)->get();
     }
 }
-
 ?>
